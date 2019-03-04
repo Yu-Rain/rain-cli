@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>上传文件测试</title>
+  <style>
+    label {margin: 10px; font-size: 18px;}
+    label.input {display: block;}
+    label.input input, button {font-size: 18px; border: 1px solid #ccc; width: 400px; padding: 5px;}
+    button {width: 200px;}
+  </style>
+</head>
+<body>
+  <form action="http://localhost:9982/common/_uploadFile" enctype="multipart/form-data" method="post">
+    <label class="input"><span>f1：</span><input name="f1" value="hello"></label>
+    <label class="input"><span>f2：</span><input name="f2" value="world"></label>
+    <label class="input"><span>f3：</span><input name="f3" type="file" accept="image/*"></label>
+    <label class="input"><span>f4：</span><input name="f4" type="file" accept="image/*"></label>
+    <label><input type="radio" name="dataType" value="json" checked>返回JSON</label>
+    <label><input type="radio" name="dataType" value="html">返回HTML</label>
+    <button>提交</button>
+  </form>
+</body>
+</html>
